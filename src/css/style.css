@@ -1,0 +1,117 @@
+:root {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-primary: #422312;
+  --color-primary-container: #5c3826;
+  --color-surface: #fcf9f4;
+  --color-surface-low: #f6f3ee;
+  --color-secondary-container: #cee8e5;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: #1c1c19;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Cores do Atelier */
+.bg-atelier-surface {
+  background-color: var(--color-surface);
+}
+.bg-atelier-low {
+  background-color: var(--color-surface-low);
+}
+.bg-atelier-primary {
+  background-color: var(--color-primary-container) !important;
+  color: #fff !important;
+}
+.text-atelier-primary {
+  color: var(--color-primary);
+}
+.bg-atelier-secondary {
+  background-color: var(--color-secondary-container);
+}
+
+/* Estilização da barra de topo fixa */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.header-backdrop {
+  background-color: rgba(252, 249, 244, 0.9);
+  backdrop-filter: blur(16px);
+}
+
+/* Ocultar barra de rolagem mantendo funcionalidade */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link-custom {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #51443f;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover {
+  color: var(--color-primary);
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #51443f;
+  transition: background-color 0.2s ease;
+}
+
+.btn-circle:hover {
+  background-color: #ebe8e3;
+  color: #1c1c19;
+}
+
+.badge-cart {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 10px;
+  padding: 0.25em 0.4em;
+}
+
+.card-hover {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.img-zoom {
+  transition: transform 0.5s ease;
+}
+
+.card-hover:hover .img-zoom {
+  transform: scale(1.05);
+}
